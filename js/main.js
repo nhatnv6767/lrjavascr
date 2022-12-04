@@ -1,5 +1,4 @@
-var test = document.getElementById("username");
-console.log(test)
+function getEle(id) {
+  return document.getElementById(id)
+}
 
-var theP = document.getElementById("pTag")
-console.log(theP)
