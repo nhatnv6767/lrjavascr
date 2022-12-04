@@ -1,5 +1,7 @@
 function myFunction() {
-  var theP = document.querySelector("p");
-  theP.innerHTML = "CHANGED";
-  theP.style.color = "green"
+  var list = document.querySelectorAll("li");
+  for (var item of list) {
+    item.style.color = "green";
+    item.style.fontSize = "55px";
+  }
 }
