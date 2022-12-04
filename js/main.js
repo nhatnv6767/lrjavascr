@@ -4,4 +4,6 @@ function myFunction() {
   var listLi = list[0].getElementsByTagName("li");
   var liDauTien = listLi[0];
   liDauTien.innerHTML = "CHANGED"
+  liDauTien.style.color = "red";
+  liDauTien.style.fontSize = "50px"
 }
