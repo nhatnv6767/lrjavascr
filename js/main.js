@@ -20,6 +20,12 @@ function thayDoiStyle(id) {
   the.style.color = "red"
 }
 
+function changeBackground(id) {
+  var the = getEle(id);
+  the.style.backgroundColor = "green"
+}
+
 function nhanNut1() {
   thayDoiStyle("theP")
+  changeBackground("theDiv")
 }
