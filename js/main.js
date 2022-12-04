@@ -13,7 +13,13 @@ function tatDen() {
 }
 
 
-function thucHienDisable() {
+function dangNhap() {
   var userName = getEle("username");
-  userName.disabled = true;
+  var pass = getEle("password");
+  var sectionThongBao = getEle("sectionThongBao")
+  var thePThongBao = getEle("thePThongBao")
+  if (userName == 'username' && pass == 'password') {
+    sectionThongBao.style.backgroundColor = "green"
+    thePThongBao.innerHTML = "Login Successfully"
+  }
 }
