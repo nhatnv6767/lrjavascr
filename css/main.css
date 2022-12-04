@@ -262,7 +262,6 @@ textarea {
 }
 
 
-
 body {
   font-family: Roboto;
   background: #8E0E00;
@@ -301,7 +300,7 @@ p {
 }
 
 form input[type="text"] {
-  width=90px;
+  width: 90px;
 }
 
 input {
@@ -311,7 +310,7 @@ input {
 #billamt {
   font-size: 14px;
   /*color: #2980b9;*/
-  color: #red;
+  color: red;
   background-color: #f7f7f7;
   width: 60%;
   padding: 5px 5px 8px 8px;
@@ -327,7 +326,7 @@ input {
   width: 60%;
   padding: 5px 5px 8px 8px;
   margin-left: 20px;
-  color: #red;
+  color: red;
   background-color: #f7f7f7;
   font-size: 14px;
 }
