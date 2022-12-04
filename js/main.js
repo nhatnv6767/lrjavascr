@@ -14,6 +14,12 @@ function anThe(id) {
   the.style.display = 'none'
 }
 
+function thayDoiStyle(id) {
+  var the = getEle(id);
+  the.style.fontStyle = "30px"
+  the.style.color = "red"
+}
+
 function nhanNut1() {
-  anThe("theP")
+  thayDoiStyle("theP")
 }
