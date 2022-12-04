@@ -18,7 +18,7 @@ function dangNhap() {
   var pass = getEle("password");
   var sectionThongBao = getEle("sectionThongBao")
   var thePThongBao = getEle("thePThongBao")
-  if (userName == 'username' && pass == 'password') {
+  if (userName.value == 'username' && pass.value == 'password') {
     sectionThongBao.style.backgroundColor = "green"
     thePThongBao.innerHTML = "Login Successfully"
   }
