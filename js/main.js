@@ -16,7 +16,7 @@ function anThe(id) {
 
 function thayDoiStyle(id) {
   var the = getEle(id);
-  the.style.fontStyle = "30px"
+  the.style.fontSize = "30px"
   the.style.color = "red"
 }
 
