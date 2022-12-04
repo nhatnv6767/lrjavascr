@@ -26,15 +26,16 @@
 
 <!-- Add your site or application content here -->
 <h1>Practise JS at the first lesson</h1>
-<h1>USE DOM TO CHANGE SRC </h1>
-<button onclick="tatDen()">TURN OFF</button>
-<img id="theDen" src="./img/pic_bulboff.gif" alt="turnoff">
-<button onclick="batDen()">TURN ON</button>
 
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
+<div style="width: 300px;height:200px;background-color: aquamarine;padding:40px">
+  Tài khoản: <input type="text" name="user" id="username"> <br><br>
+  Mật khẩu: <input type="text" name="pass" id="password"><br><br>
+  <div style="text-align:center;">
+    <button onclick="thucHienDisable()">ĐĂNG NHẬP</button>
+  </div>
+  <div id="sectionThongBao" style="width:300px; height:30px; text-align:center">
+    <p id="thePThongBao"></p></div>
+</div>
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
 <script>
   window.ga = function () {
