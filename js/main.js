@@ -1,4 +1,8 @@
+function getEle(id) {
+  return document.getElementById(id)
+}
+
 function thayDoiNoiDung() {
-  var theP = document.getElementById("theP")
+  var theP = getEle("theP")
   theP.innerHTML = "Changed"
 }
