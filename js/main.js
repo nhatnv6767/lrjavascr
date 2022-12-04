@@ -15,5 +15,5 @@ function anThe(id) {
 }
 
 function nhanNut1() {
-  anThe(p)
+  anThe("theP")
 }
