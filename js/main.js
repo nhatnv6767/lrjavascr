@@ -4,7 +4,13 @@ function getEle(id) {
 
 function calculateTip() {
   var tongBill = getEle("billamt").value;
-  console.log(tongBill)
+  var haiLongVaTip = getEle("serviceQual").value;
+  var soNguoiShare = getEle("peopleamt").value;
+
+  // validate
+  if (tongBill === "" || haiLongVaTip == 0) {
+    alert("Select value")
+  }
 }
 
 
