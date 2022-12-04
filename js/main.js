@@ -26,7 +26,13 @@ function changeDiv(id) {
   the.style.width = "100px";
 }
 
+function getStyleInfo(id) {
+  var the = getEle(id);
+  return the.style.width;
+}
+
 function nhanNut1() {
-  thayDoiStyle("theP")
+
   changeDiv("theDiv")
+  thayDoiNoiDung("content1", getStyleInfo("theDiv"))
 }
