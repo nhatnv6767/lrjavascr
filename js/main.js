@@ -2,7 +2,8 @@ function getEle(id) {
   return document.getElementById(id)
 }
 
-function thayDoiNoiDung() {
-  var theP = getEle("theP")
-  theP.innerHTML = "Changed"
+
+function thayDoiNoiDung(id, noiDung) {
+  var theP = getEle(id)
+  theP.innerHTML = noiDung
 }
