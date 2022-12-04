@@ -2,6 +2,7 @@ function getEle(id) {
   return document.getElementById(id)
 }
 
-function changeInnerHTML(id) {
-  var theP = getEle("theP");
+function changeInnerHTML(id, text) {
+  var theP = getEle(id);
+  theP.innerHTML = text;
 }
