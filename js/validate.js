@@ -15,3 +15,8 @@ document.querySelector("#btnVerify").onclick = function () {
     spanTB.className = "alert alert-danger"
   }
 }
+
+
+document.getElementById("btnCheckPattern").onclick = function () {
+  var regex = /btnCheckPattern/;
+}
