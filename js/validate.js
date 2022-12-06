@@ -8,11 +8,9 @@ document.querySelector("#btnVerify").onclick = function () {
 
   // kiem tra thong tin hop le voi pattern hay khong
   if (pattern.test(text)) {
-    txtInput.style.borderBottom = "3px solid green"
     spanTB.innerHTML = "Dữ liệu hợp lệ"
     spanTB.className = "alert alert-success"
   } else {
-    txtInput.style.borderBottom = "3px solid red"
     spanTB.innerHTML = "Dữ liệu không hợp lệ!!!"
     spanTB.className = "alert alert-danger"
   }
