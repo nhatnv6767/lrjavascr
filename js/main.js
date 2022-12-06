@@ -70,6 +70,8 @@ function tinhTongTien() {
 
 document.getElementById("btnTinhTien").onclick = function () {
   var tongTien = tinhTongTien()
+
   document.getElementById("divThanhTien").style.display = "block";
+  document.getElementById("xuatTien").innerHTML = ""
   document.getElementById("xuatTien").innerHTML = tongTien
 }
