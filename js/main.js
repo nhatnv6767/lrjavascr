@@ -66,3 +66,10 @@ function tinhTongTien() {
   }
   return tongTien;
 }
+
+
+document.getElementById("btnTinhTien").onclick = function () {
+  var tongTien = tinhTongTien()
+  document.getElementById("divThanhTien").style.display = "block";
+  document.getElementById("xuatTien").innerHTML = tongTien
+}
