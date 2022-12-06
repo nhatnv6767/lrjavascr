@@ -18,5 +18,10 @@ document.querySelector("#btnVerify").onclick = function () {
 
 
 document.getElementById("btnCheckPattern").onclick = function () {
-  var regex = /btnCheckPattern/;
+  var regex = /[abc123]/;
+  if (regex.test("xyz")) {
+    console.log("Hợp lệ")
+  } else {
+    console.log("Không hợp lệ")
+  }
 }
