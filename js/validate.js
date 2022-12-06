@@ -19,7 +19,7 @@ document.querySelector("#btnVerify").onclick = function () {
 
 document.getElementById("btnCheckPattern").onclick = function () {
   var regex = /[abc123]/;
-  if (regex.test("xyz")) {
+  if (regex.test("xyza")) {
     console.log("Hợp lệ")
   } else {
     console.log("Không hợp lệ")
