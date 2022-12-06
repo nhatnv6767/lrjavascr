@@ -41,3 +41,28 @@ function tinhTien(soKm, thoiGianCho, arrayPrice, giaCho) {
     return arrayPrice[0] + 19 * arrayPrice[1] * (soKm - 20) * arrayPrice[2] + tienCho;
   }
 }
+
+function tinhTongTien() {
+  var soKM = document.getElementById("soKM").value;
+  var thoiGianCho = document.getElementById("thoiGianCho").value;
+
+  soKM = parseFloat(soKM);
+  thoiGianCho = parseFloat(thoiGianCho);
+
+  var tongTien = 0;
+  var loaiXe = kiemTraLoaiXe()
+  switch (loaiXe) {
+    case "uberX":
+      tongTien = tinhTien(soKM, thoiGianCho, ARRAY_GIA_UBER_X, GIA_CHO_UBER_X);
+      break;
+    case "uberSUV":
+      tongTien = tinhTien(soKM, thoiGianCho, ARRAY_GIA_SUV, GIA_CHO_SUV);
+      break;
+    case "uberBlack":
+      tongTien = tinhTien(soKM, thoiGianCho, ARRAY_GIA_BLACK, GIA_CHO_BLACK)
+      break;
+    default:
+      alert("Let choose the car");
+  }
+  return tongTien;
+}
