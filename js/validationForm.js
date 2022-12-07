@@ -13,6 +13,7 @@ var checkValidation = function () {
   valid &= kiemTraTatCaLaSo("#phone", "#error_phone")
 
   valid &= kiemTraEmail("#email", "#error_email")
+  valid &= kiemTraDoDai("#password", "#error_password_min_max_length")
   if (!valid) {
     return false
   }
@@ -71,6 +72,19 @@ var kiemTraEmail = function (selectorValue, selectorError) {
     return true;
   } else {
     document.querySelector(selectorError).innerHTML = inputText.name + ' không hợp lệ !';
+    document.querySelector(selectorError).style.display = 'block';
+    return false;
+  }
+}
+
+var kiemTraDoDai = function (selectorValue, selectorError) {
+  var inputText = document.querySelector(selectorValue);
+  if (inputText.value.length >= inputText.minLength && inputText.value.length <= inputText.maxLength) {
+    document.querySelector(selectorError).innerHTML = '';
+    document.querySelector(selectorError).style.display = 'none';
+    return true;
+  } else {
+    document.querySelector(selectorError).innerHTML = inputText.name + ' từ ' + inputText.minLength + " đến " + inputText.maxLength + " ký tự!";
     document.querySelector(selectorError).style.display = 'block';
     return false;
   }
