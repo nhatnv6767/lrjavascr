@@ -22,9 +22,11 @@ var kiemTraRong = function (idValue, idError) {
   var inputText = document.getElementById(idValue);
   if (inputText.value.trim() === "") {
     document.getElementById(idError).innerHTML = inputText.name + " không được bỏ trống!"
+    document.getElementById(idError).style.display = "block"
     return false
   } else {
     document.getElementById(idError).innerHTML = ""
+    document.getElementById(idError).style.display = "none"
     return true
   }
 }
@@ -35,9 +37,11 @@ var kiemTraTatCaLaChu = function (selectorValue, selectorError) {
 
   if (regexChu.test(inputText.value)) {
     document.querySelector(selectorError).innerHTML = ""
+    document.querySelector(selectorError).style.display = "none"
     return true
   } else {
     document.querySelector(selectorError).innerHTML = inputText.name + " phải là chữ!"
+    document.querySelector(selectorError).style.display = "block"
     return false
   }
 }
