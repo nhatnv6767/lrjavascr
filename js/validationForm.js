@@ -26,6 +26,10 @@ var kiemTraRong = function (selectorValue, selectorError) {
   }
 }
 
+var kiemTraTatCaLaChu = function () {
+  var regexChu = /^[A-Za-z ]+$/;
+}
+
 
 document.getElementById('firstName').onblur = checkValidation;
 document.getElementById('lastName').onblur = checkValidation;
