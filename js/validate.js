@@ -18,10 +18,15 @@ document.querySelector("#btnVerify").onclick = function () {
 
 
 document.getElementById("btnCheckPattern").onclick = function () {
-  var regex = /n+/;
-  if (regex.test("nnn")) {
-    console.log("Hợp lệ")
-  } else {
-    console.log("Không hợp lệ")
-  }
+  // var regex = /n+/;
+  // if (regex.test("nnn")) {
+  //   console.log("Hợp lệ")
+  // } else {
+  //   console.log("Không hợp lệ")
+  // }
+
+  var str = "Học Javascript";
+  var patt = /[học]/ig;
+  var result = str.match(patt);
+  console.log(result)
 }
