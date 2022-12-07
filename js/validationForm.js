@@ -5,6 +5,6 @@ var checkValidation = function () {
   }
 }
 
-document.getElementById('firstName').onfocus = checkValidation;
+document.getElementById('firstName').onfocusout = checkValidation;
 
 document.getElementById("btnDangKy").onclick = checkValidation
