@@ -8,6 +8,9 @@ var checkValidation = function () {
     kiemTraRong("phone", "error_phone") &
     kiemTraRong("email", "error_email")
 
+  // kiem tra chu // nghia la ket hop them dieu kien &
+  valid &= kiemTraTatCaLaChu("#firstName", "#error_firstName_all_leter") &
+    kiemTraTatCaLaChu("#lastName", "#error_lastName_all_leter")
   if (!valid) {
     return false
   }
@@ -31,10 +34,10 @@ var kiemTraTatCaLaChu = function (selectorValue, selectorError) {
   var regexChu = /^[A-Za-z ]+$/;
 
   if (regexChu.test(inputText.value)) {
-    document.querySelector(selectorValue).innerHTML = ""
+    document.querySelector(selectorError).innerHTML = ""
     return true
   } else {
-    document.querySelector(selectorValue).innerHTML = inputText.name + " phải là chữ!"
+    document.querySelector(selectorError).innerHTML = inputText.name + " phải là chữ!"
     return false
   }
 }
