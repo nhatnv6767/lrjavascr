@@ -15,19 +15,28 @@ var checkValidation = function () {
   return true
 }
 
-var kiemTraRong = function (selectorValue, selectorError) {
-  var inputText = document.getElementById(selectorValue);
+var kiemTraRong = function (idValue, idError) {
+  var inputText = document.getElementById(idValue);
   if (inputText.value.trim() === "") {
-    document.getElementById(selectorError).innerHTML = inputText.name + " không được bỏ trống!"
+    document.getElementById(idError).innerHTML = inputText.name + " không được bỏ trống!"
     return false
   } else {
-    document.getElementById(selectorError).innerHTML = ""
+    document.getElementById(idError).innerHTML = ""
     return true
   }
 }
 
-var kiemTraTatCaLaChu = function () {
+var kiemTraTatCaLaChu = function (selectorValue, selectorError) {
+  var inputText = document.querySelector(selectorValue);
   var regexChu = /^[A-Za-z ]+$/;
+
+  if (regexChu.test(inputText.value)) {
+    document.querySelector(selectorValue).innerHTML = ""
+    return true
+  } else {
+    document.querySelector(selectorValue).innerHTML = inputText.name + " phải là chữ!"
+    return false
+  }
 }
 
 
