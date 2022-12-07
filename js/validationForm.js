@@ -1,8 +1,14 @@
 var checkValidation = function () {
 
   var valid = true;
-  valid = kiemTraRong("firstName", "error_firstName");
-  valid = kiemTraRong("lastName", "error_lastName");
+  valid = kiemTraRong("firstName", "error_firstName") &
+    kiemTraRong("lastName", "error_lastName") &
+    kiemTraRong("password", "error_password") &
+    kiemTraRong("confirmPassword", "error_confirmPassword") &
+    kiemTraRong("phone", "error_phone") &
+    kiemTraRong("email", "error_email")
+
+
   return valid
 }
 
