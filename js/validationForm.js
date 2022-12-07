@@ -1,7 +1,9 @@
 var checkValidation = function () {
 
-  return kiemTraRong("firstName", "error_firstName");
-
+  var valid = true;
+  valid = kiemTraRong("firstName", "error_firstName");
+  valid = kiemTraRong("lastName", "error_lastName");
+  return valid
 }
 
 var kiemTraRong = function (selectorValue, selectorError) {
