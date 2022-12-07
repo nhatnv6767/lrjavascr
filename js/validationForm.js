@@ -14,6 +14,7 @@ var checkValidation = function () {
 
   valid &= kiemTraEmail("#email", "#error_email")
   valid &= kiemTraDoDai("#password", "#error_password_min_max_length")
+  valid &= kiemTraGiaTri("#password", "#error_password_min_max_value", 20, 10)
   if (!valid) {
     return false
   }
@@ -87,6 +88,19 @@ var kiemTraDoDai = function (selectorValue, selectorError) {
     document.querySelector(selectorError).innerHTML = inputText.name + ' từ ' + inputText.minLength + " đến " + inputText.maxLength + " ký tự!";
     document.querySelector(selectorError).style.display = 'block';
     return false;
+  }
+}
+
+var kiemTraGiaTri = function (selectorValue, selectorError, maxValue, minValue) {
+  var inputText = document.querySelector(selectorValue);
+  if (inputText.value > Number(maxValue) || inputText.value < Number(minValue)) {
+    document.querySelector(selectorError).innerHTML = inputText.name + ' từ ' + minValue + ' đến ' + maxValue + ' !';
+    document.querySelector(selectorError).style.display = 'block';
+    return false;
+  } else {
+    document.querySelector(selectorError).innerHTML = '';
+    document.querySelector(selectorError).style.display = 'none';
+    return true;
   }
 }
 
