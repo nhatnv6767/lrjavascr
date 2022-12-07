@@ -11,6 +11,8 @@ var checkValidation = function () {
   // kiem tra chu // nghia la ket hop them dieu kien &
   valid &= kiemTraTatCaLaChu("#firstName", "#error_firstName_all_leter") &
     kiemTraTatCaLaChu("#lastName", "#error_lastName_all_leter")
+
+  valid &= kiemTraTatCaLaSo("#phone", "#error_phone")
   if (!valid) {
     return false
   }
