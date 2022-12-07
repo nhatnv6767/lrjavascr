@@ -14,6 +14,17 @@ var checkValidation = function () {
   }
 }
 
+var kiemTraRong = function (value, selectorError, name) {
+  if (value.trim() === "") {
+    document.getElementById(selectorError).innerHTML = name + " không được bỏ trống!"
+    return false
+  } else {
+    document.getElementById(selectorError).innerHTML = ""
+    return true
+  }
+}
+
+
 document.getElementById('firstName').onblur = checkValidation;
 document.getElementById('lastName').onblur = checkValidation;
 
