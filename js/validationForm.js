@@ -46,6 +46,19 @@ var kiemTraTatCaLaChu = function (selectorValue, selectorError) {
   }
 }
 
+var kiemTraTatCaLaSo = function (selectorValue, selectorError) {
+  var inputText = document.querySelector(selectorValue);
+  var regexNumber = /^[0-9]+$/;
+  if (regexNumber.test(inputText.value)) {
+    document.querySelector(selectorError).innerHTML = '';
+    document.querySelector(selectorError).style.display = 'none';
+    return true;
+  } else {
+    document.querySelector(selectorError).innerHTML = inputText.name + ' yêu cầu nhập số !';
+    document.querySelector(selectorError).style.display = 'block';
+    return false;
+  }
+}
 
 document.getElementById('firstName').onblur = checkValidation;
 document.getElementById('lastName').onblur = checkValidation;
