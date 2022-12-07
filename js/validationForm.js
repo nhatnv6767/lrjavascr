@@ -5,4 +5,5 @@ var checkValidation = function () {
   }
 }
 
+
 document.getElementById("btnDangKy").onclick = checkValidation()
