@@ -29,4 +29,5 @@ document.getElementById("btnCheckPattern").onclick = function () {
   var patt = /[học]/ig;
   var result = str.match(patt);
   console.log(result)
+  console.log(patt.test(str))
 }
