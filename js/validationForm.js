@@ -4,9 +4,10 @@ var checkValidation = function () {
   return checkHo;
 }
 
-var kiemTraRong = function (value, selectorError, name) {
-  if (value.trim() === "") {
-    document.getElementById(selectorError).innerHTML = name + " không được bỏ trống!"
+var kiemTraRong = function (selectorValue, selectorError) {
+  var inputText = document.getElementById(selectorValue).value;
+  if (inputText.value.trim() === "") {
+    document.getElementById(selectorError).innerHTML = inputText.name + " không được bỏ trống!"
     return false
   } else {
     document.getElementById(selectorError).innerHTML = ""
