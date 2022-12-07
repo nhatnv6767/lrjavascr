@@ -8,8 +8,11 @@ var checkValidation = function () {
     kiemTraRong("phone", "error_phone") &
     kiemTraRong("email", "error_email")
 
+  if (!valid) {
+    return false
+  }
 
-  return valid
+  return true
 }
 
 var kiemTraRong = function (selectorValue, selectorError) {
