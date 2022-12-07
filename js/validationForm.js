@@ -4,14 +4,15 @@ var checkValidation = function () {
   valid = kiemTraRong("firstName", "error_firstName") &
     kiemTraRong("lastName", "error_lastName") &
     kiemTraRong("password", "error_password") &
-    kiemTraRong("confirmPassword", "error_confirmPassword") &
-    kiemTraRong("email", "error_email")
+    kiemTraRong("confirmPassword", "error_confirmPassword")
 
   // kiem tra chu // nghia la ket hop them dieu kien &
   valid &= kiemTraTatCaLaChu("#firstName", "#error_firstName_all_leter") &
     kiemTraTatCaLaChu("#lastName", "#error_lastName_all_leter")
 
   valid &= kiemTraTatCaLaSo("#phone", "#error_phone")
+
+  valid &= kiemTraEmail("#email", "#error_email")
   if (!valid) {
     return false
   }
@@ -56,6 +57,20 @@ var kiemTraTatCaLaSo = function (selectorValue, selectorError) {
     return true;
   } else {
     document.querySelector(selectorError).innerHTML = inputText.name + ' yêu cầu nhập số !';
+    document.querySelector(selectorError).style.display = 'block';
+    return false;
+  }
+}
+
+var kiemTraEmail = function (selectorValue, selectorError) {
+  var inputText = document.querySelector(selectorValue);
+  var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\ [[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (regexEmail.test(inputText.value)) {
+    document.querySelector(selectorError).innerHTML = '';
+    document.querySelector(selectorError).style.display = 'none';
+    return true;
+  } else {
+    document.querySelector(selectorError).innerHTML = inputText.name + ' không hợp lệ !';
     document.querySelector(selectorError).style.display = 'block';
     return false;
   }
