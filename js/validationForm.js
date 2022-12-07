@@ -1,15 +1,11 @@
 var checkValidation = function () {
 
-  if (kiemTraRong("firstName", "error_firstName")) {
-    return true
-  } else {
-    return false
-  }
+  return kiemTraRong("firstName", "error_firstName");
 
 }
 
 var kiemTraRong = function (selectorValue, selectorError) {
-  var inputText = document.getElementById(selectorValue).value;
+  var inputText = document.getElementById(selectorValue);
   if (inputText.value.trim() === "") {
     document.getElementById(selectorError).innerHTML = inputText.name + " không được bỏ trống!"
     return false
