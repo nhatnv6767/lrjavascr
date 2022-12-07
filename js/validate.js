@@ -18,7 +18,7 @@ document.querySelector("#btnVerify").onclick = function () {
 
 
 document.getElementById("btnCheckPattern").onclick = function () {
-  var regex = /[a-z0-9]/;
+  var regex = /(x|y)/;
   if (regex.test("xyza")) {
     console.log("Hợp lệ")
   } else {
