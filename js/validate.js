@@ -18,8 +18,8 @@ document.querySelector("#btnVerify").onclick = function () {
 
 
 document.getElementById("btnCheckPattern").onclick = function () {
-  var regex = /\d/;
-  if (regex.test("4322")) {
+  var regex = /n+/;
+  if (regex.test("nnn")) {
     console.log("Hợp lệ")
   } else {
     console.log("Không hợp lệ")
