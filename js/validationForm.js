@@ -5,7 +5,6 @@ var checkValidation = function () {
     kiemTraRong("lastName", "error_lastName") &
     kiemTraRong("password", "error_password") &
     kiemTraRong("confirmPassword", "error_confirmPassword") &
-    kiemTraRong("phone", "error_phone") &
     kiemTraRong("email", "error_email")
 
   // kiem tra chu // nghia la ket hop them dieu kien &
