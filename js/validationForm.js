@@ -1,7 +1,11 @@
 var checkValidation = function () {
-  var hoTen = document.getElementById("firstName").value;
-  var checkHo = kiemTraRong(hoTen, "error_firstName", "Họ")
-  return checkHo;
+
+  if (kiemTraRong("firstName", "error_firstName")) {
+    return true
+  } else {
+    return false
+  }
+
 }
 
 var kiemTraRong = function (selectorValue, selectorError) {
