@@ -4,7 +4,11 @@ var sinhVien = { // scope
     loaiSinhVien: "Kho Khan",
     diemToan: 1,
     diemLy: 5,
-    diemHoa: 7
+    diemHoa: 7,
+    tinhDiemTrungBinh: function () {
+        var dtb = (Number(sinhVien.diemToan) + Number(sinhVien.diemLy) + Number(sinhVien.diemHoa)) / 3
+        return dtb
+    }
 }
 
 console.log(sinhVien.maSV)
