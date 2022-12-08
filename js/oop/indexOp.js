@@ -11,6 +11,5 @@ var sinhVien = { // scope instance
     }
 }
 
-console.log(sinhVien.maSV)
-console.log(sinhVien["tenSV"])
-console.log(sinhVien.tinhDiemTrungBinh())
+var sinhVien2 = new SinhVien()
+console.log(sinhVien2)
