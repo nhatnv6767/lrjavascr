@@ -13,4 +13,24 @@ var tinhDiemTrungBinh = function (diemToan, diemLy, diemHoa) {
   return dtb;
 }
 
+var xepLoai = function (diemTrungBinh, diemRenLuyen) {
+  if (diemRenLuyen < 5) {
+    return "Yếu"
+  } else {
+    if (diemTrungBinh < 5) {
+      return "Yếu"
+    } else if (diemTrungBinh >= 5 && diemTrungBinh < 6.5) {
+      return "Trung Bình";
+    } else if (diemTrungBinh >= 6.5 && diemTrungBinh < 8) {
+      return "Khá"
+    } else if (diemTrungBinh >= 8 && diemTrungBinh < 9) {
+      return "Giỏi"
+    } else if (diemTrungBinh >= 9 && diemTrungBinh < 10) {
+      return "Xuất sắc"
+    } else {
+      return "Không hợp lệ"
+    }
+  }
+}
+
 document.querySelector("#btnXacNhan").onclick = xuLyXacNhan;
