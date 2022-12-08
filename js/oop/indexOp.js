@@ -1,4 +1,5 @@
 var sinhVien = new SinhVien();
+var validation = new Validation();
 var xuLyXacNhan = function () {
     sinhVien.maSV = document.querySelector("#maSinhVien").value;
     sinhVien.tenSV = document.querySelector("#tenSinhVien").value;
@@ -8,6 +9,14 @@ var xuLyXacNhan = function () {
     sinhVien.diemHoa = document.querySelector("#diemHoa").value;
     sinhVien.diemRenLuyen = document.querySelector("#diemRenLuyen").value;
     // DOM den giao dien hien thi du lieu
+
+    // Kiem tra validation
+    var valid = true;
+    valid &= validation.kiemTraRong(sinhVien.maSV);
+    if (!valid) {
+        alert("Dữ liệu không hợp lệ")
+        return;
+    }
 
     document.querySelector("#txtTenSinhVien").innerHTML = sinhVien.tenSV;
     document.querySelector("#txtMaSinhVien").innerHTML = sinhVien.maSV;
