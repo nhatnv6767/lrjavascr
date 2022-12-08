@@ -6,10 +6,11 @@ var sinhVien = { // scope
     diemLy: 5,
     diemHoa: 7,
     tinhDiemTrungBinh: function () {
-        var dtb = (Number(sinhVien.diemToan) + Number(sinhVien.diemLy) + Number(sinhVien.diemHoa)) / 3
-        return dtb
+        var dtb = (Number(this.diemToan) + Number(this.diemLy) + Number(this.diemHoa)) / 3
+        return dtb.toFixed(2)
     }
 }
 
 console.log(sinhVien.maSV)
 console.log(sinhVien["tenSV"])
+console.log(sinhVien.tinhDiemTrungBinh())
