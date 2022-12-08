@@ -15,7 +15,9 @@ function ThemSinhVien() {
     var sdt = DomID("sdt").value;
 
     // kiem tra validation
-
+    if (KiemTraDauVaoRong("masv", masv)) {
+        return
+    }
 }
 
 function KiemTraDauVaoRong(ID, value) {
