@@ -8,6 +8,8 @@ var xuLyXacNhan = function () {
   var diemRenLuyen = document.querySelector("#diemRenLuyen").value;
   var diemTrungBinh = tinhDiemTrungBinh(diemToan, diemLy, diemHoa)
   var xepLoaiSinhVien = xepLoai(diemTrungBinh, diemRenLuyen)
+  console.log(diemTrungBinh)
+  console.log(xepLoaiSinhVien)
 }
 
 var tinhDiemTrungBinh = function (diemToan, diemLy, diemHoa) {
@@ -27,7 +29,7 @@ var xepLoai = function (diemTrungBinh, diemRenLuyen) {
       return "Khá"
     } else if (diemTrungBinh >= 8 && diemTrungBinh < 9) {
       return "Giỏi"
-    } else if (diemTrungBinh >= 9 && diemTrungBinh < 10) {
+    } else if (diemTrungBinh >= 9 && diemTrungBinh <= 10) {
       return "Xuất sắc"
     } else {
       return "Không hợp lệ"
