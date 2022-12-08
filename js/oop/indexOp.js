@@ -6,3 +6,6 @@ var sinhVien = { // scope
     diemLy: 5,
     diemHoa: 7
 }
+
+console.log(sinhVien.maSV)
+console.log(sinhVien["tenSV"])
