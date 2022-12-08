@@ -17,6 +17,7 @@ var xuLyXacNhan = function () {
   document.querySelector("#txtXepLoai").innerHTML = xepLoaiSinhVien;
 }
 
+
 var tinhDiemTrungBinh = function (diemToan, diemLy, diemHoa) {
   var dtb = (Number(diemToan) + Number(diemLy) + Number(diemHoa)) / 3;
   return dtb;
