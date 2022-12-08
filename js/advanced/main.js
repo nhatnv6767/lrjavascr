@@ -15,5 +15,9 @@ function ThemSinhVien() {
     var sdt = DomID("sdt").value;
 
     // kiem tra validation
-    validate.KiemTraRong(masv)
+    if (validate.KiemTraRong(masv)) {
+        DomID("masv").style.borderColor = "red"
+    } else {
+        DomID("masv").style.borderColor = "green"
+    }
 }
