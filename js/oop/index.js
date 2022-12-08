@@ -8,8 +8,13 @@ var xuLyXacNhan = function () {
   var diemRenLuyen = document.querySelector("#diemRenLuyen").value;
   var diemTrungBinh = tinhDiemTrungBinh(diemToan, diemLy, diemHoa)
   var xepLoaiSinhVien = xepLoai(diemTrungBinh, diemRenLuyen)
-  console.log(diemTrungBinh)
-  console.log(xepLoaiSinhVien)
+  // xu ly in ket qua
+
+  document.querySelector("#txtTenSinhVien").innerHTML = tenSinhVien;
+  document.querySelector("#txtMaSinhVien").innerHTML = maSinhVien;
+  document.querySelector("#txtLoaiSinhVien").innerHTML = loaiSinhVien;
+  document.querySelector("#txtDiemTrungBinh").innerHTML = diemTrungBinh.toFixed(2);
+  document.querySelector("#txtXepLoai").innerHTML = xepLoaiSinhVien;
 }
 
 var tinhDiemTrungBinh = function (diemToan, diemLy, diemHoa) {
