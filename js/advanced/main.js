@@ -14,9 +14,25 @@ function ThemSinhVien() {
     var email = DomID("email").value;
     var sdt = DomID("sdt").value;
 
+    var loi = 0
     // kiem tra validation
     if (KiemTraDauVaoRong("masv", masv)) {
-        return
+        loi++
+    }
+    if (KiemTraDauVaoRong("hoten", hoten)) {
+        loi++
+    }
+    if (KiemTraDauVaoRong("cmnd", cmnd)) {
+        loi++
+    }
+    if (KiemTraDauVaoRong("email", email)) {
+        loi++
+    }
+    if (KiemTraDauVaoRong("sdt", sdt)) {
+        loi++
+    }
+    if (loi != 0) {
+        return;
     }
 }
 
