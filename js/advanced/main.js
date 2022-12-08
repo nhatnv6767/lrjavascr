@@ -20,10 +20,10 @@ function ThemSinhVien() {
 
 function KiemTraDauVaoRong(ID, value) {
     if (validate.KiemTraRong(value)) {
-        DomID("masv").style.borderColor = "red"
+        DomID(ID).style.borderColor = "red"
         return true
     } else {
-        DomID("masv").style.borderColor = "green"
+        DomID(ID).style.borderColor = "green"
         return false
     }
 }
