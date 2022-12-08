@@ -5,7 +5,9 @@ var xuLyXacNhan = function () {
   var diemToan = document.querySelector("#diemToan").value;
   var diemLy = document.querySelector("#diemLy").value;
   var diemHoa = document.querySelector("#diemHoa").value;
+  var diemRenLuyen = document.querySelector("#diemRenLuyen").value;
   var diemTrungBinh = tinhDiemTrungBinh(diemToan, diemLy, diemHoa)
+  var xepLoaiSinhVien = xepLoai(diemTrungBinh, diemRenLuyen)
 }
 
 var tinhDiemTrungBinh = function (diemToan, diemLy, diemHoa) {
