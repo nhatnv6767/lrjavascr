@@ -18,6 +18,14 @@ var xuLyXacNhan = function () {
         validation.kiemTraRong(sinhVien.diemLy, "Điểm lý", "#error_diemLy_required") &
         validation.kiemTraRong(sinhVien.diemHoa, "Điểm hoá", "#error_diemHoa_required") &
         validation.kiemTraRong(sinhVien.diemRenLuyen, "Điểm rèn luyện", "#error_diemRenLuyen_required")
+
+    // kiem tra tat ca la so
+    valid &= validation.kiemTraDoDaiChuoi(sinhVien.maSV, 'Mã sinh viên', '#error_maSinhVien_all_number')
+        & validation.kiemTraDoDaiChuoi(sinhVien.diemToan, 'Điểm toán', '#error_diemToan_all_number')
+        & validation.kiemTraDoDaiChuoi(sinhVien.diemLy, 'Điểm lý', '#error_diemLy_all_number')
+        & validation.kiemTraDoDaiChuoi(sinhVien.diemHoa, 'Điểm hoá', '#error_diemHoa_all_number')
+        & validation.kiemTraDoDaiChuoi(sinhVien.diemRenLuyen, 'Điểm rèn luyện', '#error_diemRenLuyen_all_number');
+
     if (!valid) {
         alert("Dữ liệu không hợp lệ")
         return;

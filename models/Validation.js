@@ -19,6 +19,7 @@ var Validation = function () {
         }
         document.querySelector(selectorError).innerHTML = name + " tất cả phải là số"
         document.querySelector(selectorError).style.display = "block";
+        return false;
     }
     // kiem tra do dai chuoi
 
