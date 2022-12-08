@@ -12,7 +12,13 @@ var xuLyXacNhan = function () {
 
     // Kiem tra validation
     var valid = true;
-    valid &= validation.kiemTraRong(sinhVien.maSV);
+    valid &= validation.kiemTraRong(sinhVien.maSV) &
+        validation.kiemTraRong(sinhVien.tenSV) &
+        validation.kiemTraRong(sinhVien.loaiSinhVien) &
+        validation.kiemTraRong(sinhVien.diemToan) &
+        validation.kiemTraRong(sinhVien.diemLy) &
+        validation.kiemTraRong(sinhVien.diemHoa) &
+        validation.kiemTraRong(sinhVien.diemRenLuyen)
     if (!valid) {
         alert("Dữ liệu không hợp lệ")
         return;
