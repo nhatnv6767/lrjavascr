@@ -1,4 +1,4 @@
-var sinhVien = { // scope
+var sinhVien = { // scope instance
     maSV: 1,
     tenSV: "Nguyen Thanh Than",
     loaiSinhVien: "Kho Khan",
