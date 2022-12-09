@@ -37,6 +37,8 @@ var Validation = function () {
     this.kiemTraTatCaLaChu = function (value, name, selectorError) {
         var regexCharacter = new RegExp("^[a-zA-Z ]+$");
         // To match all Unicode letters and numbers
+        // \p{L} is short for \p{Letter}
+        // \p{N} is short for \p{Number}
         const alphanumeric = /^[\p{L}\p{N}]*$/u;
         if (regexCharacter.test(value)) {
             document.querySelector(selectorError).innerHTML = ""

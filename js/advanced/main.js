@@ -45,3 +45,9 @@ function KiemTraDauVaoRong(ID, value) {
         return false
     }
 }
+
+function KiemTraTatCaLaChu() {
+    if (validate.kiemTraTatCaLaChu()) {
+
+    }
+}
