@@ -34,7 +34,15 @@ var Validation = function () {
         return true;
     }
     //
-    this.kiemTraTatCaLaChu = function (value, name, selectorError){
-
+    this.kiemTraTatCaLaChu = function (value, name, selectorError) {
+        var regexCharacter = new RegExp("^[a-zA-Z ]+$");
+        if (regexCharacter.test(value)) {
+            document.querySelector(selectorError).innerHTML = ""
+            document.querySelector(selectorError).style.display = "none";
+            return true
+        }
+        document.querySelector(selectorError).innerHTML = name + " tất cả phải là chữ!"
+        document.querySelector(selectorError).style.display = "block";
+        return false;
     }
 }
