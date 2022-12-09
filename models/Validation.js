@@ -33,4 +33,8 @@ var Validation = function () {
         document.querySelector(selectorError).style.display = 'none';
         return true;
     }
+    //
+    this.kiemTraTatCaLaChu = function (value, name, selectorError){
+
+    }
 }
