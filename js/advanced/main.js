@@ -77,6 +77,8 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         var sv = danhSachSinhVien.DSSV[i];
         // tao the tr
         var trSinhVien = document.createElement("tr")
+        trSinhVien.id = sv.MaSV;
+        trSinhVien.className = "trSinhVien"
         // tao cac the td va filter du lieu sinh vien thu [i] vao
         var tdCheckBox = document.createElement("td")
         var ckbMaSinhVien = document.createElement("input")
