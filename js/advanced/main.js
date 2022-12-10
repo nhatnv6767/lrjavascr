@@ -145,3 +145,9 @@ function XoaSinhVien() {
     CapNhatDanhSachSV(danhSachSinhVien)
     SetStorage()
 }
+
+function TimKiemSinhVien() {
+    var tukhoa = DomID("tukhoa").value;
+    var lstDanhSachSinhVienTimKiem = danhSachSinhVien.TimKiemSinhVien(tukhoa)
+    CapNhatDanhSachSV(lstDanhSachSinhVienTimKiem)
+}
