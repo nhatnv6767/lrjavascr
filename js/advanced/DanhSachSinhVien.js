@@ -16,5 +16,13 @@ function DanhSachSinhVien() {
     this.SuaSinhVien = function (svCapNhat) {
     }
     this.TimKiemSinhVien = function (keyWord) {
+        // list ket qua tim kiem: DanhSachSinhVien
+        var lstKetQuaTimKiem = new DanhSachSinhVien();
+        for (var i = 0; i < this.DSSV.length; i++) {
+            var sinhvien = this.DSSV[i];
+            if (sinhvien.HoTen.search(keyWord) !== -1) {
+                lstKetQuaTimKiem.ThemSinhVien()
+            }
+        }
     }
 }
