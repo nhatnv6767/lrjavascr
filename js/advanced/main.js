@@ -67,7 +67,33 @@ function KiemTraTatCaLaChu() {
 
 
 function CapNhatDanhSachSV(DanhSachSinhVien) {
+    var lstTableSV = DomID("tbodySinhVien");
+    lstTableSV.innerHTML = "";
+    for (var i = 0; i < DanhSachSinhVien.DSSV.length; i++) {
+        // lay thong tin sinh vien tu trong mang sinh vien
+        var sv = danhSachSinhVien.DSSV[i];
+        // tao the tr
+        var trSinhVien = document.createElement("tr")
+        // tao cac the td va filter du lieu sinh vien thu [i] vao
+        var tdCheckBox = document.createElement("td")
+        var tdMaSV = TaoTheTD("MaSV", sv.MaSV);
+        var tdHoTen = TaoTheTD("HoTen", sv.HoTen);
+        var tdCMND = TaoTheTD("CMND", sv.CMND);
+        var tdEmail = TaoTheTD("Email", sv.Email);
+        var tdSoDT = TaoTheTD("SoDT", sv.SoDT);
 
+        // append cac td vao tr
+        trSinhVien.appendChild(tdCheckBox)
+        trSinhVien.appendChild(tdMaSV)
+        trSinhVien.appendChild(tdHoTen)
+        trSinhVien.appendChild(tdCMND)
+        trSinhVien.appendChild(tdEmail)
+        trSinhVien.appendChild(tdSoDT)
+
+        // append cac tr vao tbodySinhVien
+        lstTableSV.appendChild(trSinhVien)
+
+    }
 }
 
 function TaoTheTD(className, value) {
