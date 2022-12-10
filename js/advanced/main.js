@@ -31,9 +31,13 @@ function ThemSinhVien() {
         document.getElementById("email").style.borderColor = "red"
         loi++
     }
-    if (KiemTraDauVaoRong("sdt", sdt)) {
+    if (validate.KiemTraSoDT(sdt)) {
+        document.getElementById("sdt").style.borderColor = "green"
+    } else {
+        document.getElementById("sdt").style.borderColor = "red"
         loi++
     }
+
     if (loi != 0) {
         return;
     }
