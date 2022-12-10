@@ -20,7 +20,7 @@ function DanhSachSinhVien() {
         var lstKetQuaTimKiem = new DanhSachSinhVien();
         for (var i = 0; i < this.DSSV.length; i++) {
             var sinhvien = this.DSSV[i];
-            if (sinhvien.HoTen.search(keyWord) !== -1) {
+            if (sinhvien.HoTen.search(keyWord.toLowerCase()) !== -1) {
                 lstKetQuaTimKiem.ThemSinhVien(sinhvien)
             }
         }
