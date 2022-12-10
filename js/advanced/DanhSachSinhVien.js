@@ -14,6 +14,16 @@ function DanhSachSinhVien() {
         }
     }
     this.SuaSinhVien = function (svCapNhat) {
+        for (var i = 0; i < this.DSSV.length; i++) {
+            var svCurrent = this.DSSV[i];
+            if (svCapNhat.MaSV === svCurrent) {
+                svCurrent.HoTen = svCapNhat.HoTen;
+                svCurrent.Email = svCapNhat.Email;
+                svCurrent.CMND = svCapNhat.CMND;
+                svCurrent.SoDT = svCapNhat.SoDT;
+            }
+        }
+        return this.DSSV;
     }
     this.TimKiemSinhVien = function (keyWord) {
         // list ket qua tim kiem: DanhSachSinhVien
