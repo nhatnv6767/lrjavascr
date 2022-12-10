@@ -79,7 +79,7 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         var trSinhVien = document.createElement("tr")
         trSinhVien.id = sv.MaSV;
         trSinhVien.className = "trSinhVien"
-        trSinhVien.setAttribute("onclick", "ChinhSuaSinhVien(" + sv.MaSV + ")")
+        trSinhVien.setAttribute("onclick", "ChinhSuaSinhVien('" + sv.MaSV + "')")
         // tao cac the td va filter du lieu sinh vien thu [i] vao
         var tdCheckBox = document.createElement("td")
         var ckbMaSinhVien = document.createElement("input")
@@ -155,7 +155,7 @@ function TimKiemSinhVien() {
     CapNhatDanhSachSV(lstDanhSachSinhVienTimKiem)
 }
 
-function ChinhSuaSinhVien() {
+function ChinhSuaSinhVien(masv) {
     var sinhvien = danhSachSinhVien.TimSVTheoMa(masv)
     if (sinhvien != null) {
         DomID("masv").value = sinhvien.MaSV
