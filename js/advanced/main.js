@@ -2,6 +2,27 @@ var danhSachSinhVien = new DanhSachSinhVien();
 var validate = new Validation();
 
 GetStorage()
+// bo sung thuoc tinh
+SinhVien.prototype.DiemToan = ""
+SinhVien.prototype.DiemLy = ""
+SinhVien.prototype.DiemHoa = ""
+SinhVien.prototype.DTB = ""
+SinhVien.prototype.Loai = ""
+// them phuong thuc
+SinhVien.prototype.TinhDTB = function () {
+    this.DTB = (Number(this.DiemToan) + Number(this.DiemLy) + Number(this.DiemHoa)) / 3
+}
+SinhVien.prototype.XepLoai = function () {
+    if (this.DTB <= 10 && this.DTB >= 8) {
+        this.Loai = "Xếp loại Giỏi"
+    } else if (this.DTB < 8 && this.DTB >= 6.5) {
+        this.Loai = "Xếp loại Khá"
+    } else if (this.DTB < 6.5 && this.DTB >= 5) {
+        this.Loai = "Xếp loại Trung Bình"
+    } else {
+        this.Loai = "Xếp loại Yếu"
+    }
+}
 
 function DomID(id) {
     var element = document.getElementById(id);
