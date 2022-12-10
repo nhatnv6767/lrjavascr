@@ -13,9 +13,7 @@ function Validation() {
     }
     this.KiemTraSoDT = function (value) {
         var re = /^\d+$/;
-        if (re.test(value) && value.length >= 10) {
-            return true;
-        }
-        return false;
+        return re.test(value) && value.length >= 10;
+
     }
 }
