@@ -126,3 +126,18 @@ function GetStorage() {
     danhSachSinhVien.DSSV = mangDSSV;
     CapNhatDanhSachSV(danhSachSinhVien)
 }
+
+function XoaSinhVien() {
+    // mang checkbox
+    var lstMaSV = document.getElementsByClassName("ckbMaSV");
+    // mang ma sinh vien duoc chon
+    var lstMaSVDuocChon = []
+    for (var i = 0; i < lstMaSV.length; i++) {
+        console.log(lstMaSV[i])
+        // kiem phan tu checkbox da duoc chon hay chua
+        if (lstMaSV[i].checked) {
+            lstMaSVDuocChon.push(lstMaSV[i].value)
+        }
+    }
+    danhSachSinhVien.XoaSinhVien(lstMaSV)
+}
