@@ -140,4 +140,5 @@ function XoaSinhVien() {
         }
     }
     danhSachSinhVien.XoaSinhVien(lstMaSV)
+    CapNhatDanhSachSV(danhSachSinhVien)
 }
