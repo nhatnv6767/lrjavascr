@@ -79,6 +79,7 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         var tdCheckBox = document.createElement("td")
         var ckbMaSinhVien = document.createElement("input")
         console.log(ckbMaSinhVien)
+        ckbMaSinhVien.setAttribute("class", "ckbMaSV")
         ckbMaSinhVien.setAttribute("type", "checkbox")
         ckbMaSinhVien.setAttribute("value", sv.MaSV)
         tdCheckBox.appendChild(ckbMaSinhVien)
