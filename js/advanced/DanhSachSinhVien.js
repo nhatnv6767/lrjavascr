@@ -21,8 +21,9 @@ function DanhSachSinhVien() {
         for (var i = 0; i < this.DSSV.length; i++) {
             var sinhvien = this.DSSV[i];
             if (sinhvien.HoTen.search(keyWord) !== -1) {
-                lstKetQuaTimKiem.ThemSinhVien()
+                lstKetQuaTimKiem.ThemSinhVien(sinhvien)
             }
         }
+        return lstKetQuaTimKiem
     }
 }
