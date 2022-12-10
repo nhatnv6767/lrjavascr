@@ -235,6 +235,11 @@ function LuuThongTin() {
 
     // them sinh vien
     var sinhvien = new SinhVien(masv, hoten, email, sdt, cmnd)
+    sinhvien.DiemToan = DomID("Toan").value
+    sinhvien.DiemLy = DomID("Ly").value
+    sinhvien.DiemHoa = DomID("Hoa").value
+    sinhvien.TinhDTB();
+    sinhvien.XepLoai();
     danhSachSinhVien.SuaSinhVien(sinhvien)
     CapNhatDanhSachSV(danhSachSinhVien)
 }
