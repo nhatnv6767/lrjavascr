@@ -41,6 +41,11 @@ function ThemSinhVien() {
     if (loi != 0) {
         return;
     }
+
+    // them sinh vien
+    var sinhvien = new SinhVien(masv, hoten, email, sdt, cmnd)
+    danhSachSinhVien.ThemSinhVien(sinhvien)
+    console.log(danhSachSinhVien)
 }
 
 
