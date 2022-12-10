@@ -48,7 +48,6 @@ function ThemSinhVien() {
     var sinhvien = new SinhVien(masv, hoten, email, sdt, cmnd)
     danhSachSinhVien.ThemSinhVien(sinhvien)
     CapNhatDanhSachSV(danhSachSinhVien)
-    console.log(danhSachSinhVien)
 }
 
 
@@ -164,4 +163,46 @@ function ChinhSuaSinhVien(masv) {
         DomID("email").value = sinhvien.Email
         DomID("sdt").value = sinhvien.SoDT
     }
+}
+
+function LuuThongTin() {
+    // lay du lieu tu nguoi dung
+    var masv = DomID("masv").value;
+    var hoten = DomID("hoten").value;
+    var cmnd = DomID("cmnd").value;
+    var email = DomID("email").value;
+    var sdt = DomID("sdt").value;
+
+    var loi = 0
+    // kiem tra validation
+    if (KiemTraDauVaoRong("masv", masv)) {
+        loi++
+    }
+    if (KiemTraDauVaoRong("hoten", hoten)) {
+        loi++
+    }
+    if (KiemTraDauVaoRong("cmnd", cmnd)) {
+        loi++
+    }
+    if (validate.KiemTraEmail(email)) {
+        document.getElementById("email").style.borderColor = "green"
+    } else {
+        document.getElementById("email").style.borderColor = "red"
+        loi++
+    }
+    if (validate.KiemTraSoDT(sdt)) {
+        document.getElementById("sdt").style.borderColor = "green"
+    } else {
+        document.getElementById("sdt").style.borderColor = "red"
+        loi++
+    }
+
+    if (loi != 0) {
+        return;
+    }
+
+    // them sinh vien
+    var sinhvien = new SinhVien(masv, hoten, email, sdt, cmnd)
+    danhSachSinhVien.SuaSinhVien(sinhvien)
+    CapNhatDanhSachSV(danhSachSinhVien)
 }
