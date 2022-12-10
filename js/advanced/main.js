@@ -139,6 +139,6 @@ function XoaSinhVien() {
             lstMaSVDuocChon.push(lstMaSV[i].value)
         }
     }
-    danhSachSinhVien.XoaSinhVien(lstMaSV)
+    danhSachSinhVien.XoaSinhVien(lstMaSVDuocChon)
     CapNhatDanhSachSV(danhSachSinhVien)
 }
