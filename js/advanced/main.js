@@ -158,6 +158,10 @@ function TimKiemSinhVien() {
 function ChinhSuaSinhVien() {
     var sinhvien = danhSachSinhVien.TimSVTheoMa(masv)
     if (sinhvien != null) {
-        DomID("MaSV").value = sinhvien.MaSV
+        DomID("masv").value = sinhvien.MaSV
+        DomID("hoten").value = sinhvien.HoTen
+        DomID("cmnd").value = sinhvien.CMND
+        DomID("email").value = sinhvien.Email
+        DomID("sdt").value = sinhvien.SoDT
     }
 }
