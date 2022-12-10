@@ -23,7 +23,6 @@ function DanhSachSinhVien() {
                 svCurrent.SoDT = svCapNhat.SoDT;
             }
         }
-        return this.DSSV;
     }
     this.TimKiemSinhVien = function (keyWord) {
         // list ket qua tim kiem: DanhSachSinhVien
