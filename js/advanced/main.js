@@ -25,7 +25,10 @@ function ThemSinhVien() {
     if (KiemTraDauVaoRong("cmnd", cmnd)) {
         loi++
     }
-    if (KiemTraDauVaoRong("email", email)) {
+    if (validate.KiemTraEmail(email)) {
+        document.getElementById("email").style.borderColor = "green"
+    } else {
+        document.getElementById("email").style.borderColor = "red"
         loi++
     }
     if (KiemTraDauVaoRong("sdt", sdt)) {
@@ -35,6 +38,7 @@ function ThemSinhVien() {
         return;
     }
 }
+
 
 function KiemTraDauVaoRong(ID, value) {
     if (validate.KiemTraRong(value)) {
