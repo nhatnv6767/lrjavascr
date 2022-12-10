@@ -45,6 +45,7 @@ function ThemSinhVien() {
     // them sinh vien
     var sinhvien = new SinhVien(masv, hoten, email, sdt, cmnd)
     danhSachSinhVien.ThemSinhVien(sinhvien)
+    CapNhatDanhSachSV(danhSachSinhVien)
     console.log(danhSachSinhVien)
 }
 
