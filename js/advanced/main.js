@@ -77,6 +77,11 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         var trSinhVien = document.createElement("tr")
         // tao cac the td va filter du lieu sinh vien thu [i] vao
         var tdCheckBox = document.createElement("td")
+        var ckbMaSinhVien = document.createElement("input")
+        console.log(ckbMaSinhVien)
+        ckbMaSinhVien.setAttribute("type", "checkbox")
+        ckbMaSinhVien.setAttribute("value", sv.MaSV)
+
         var tdMaSV = TaoTheTD("MaSV", sv.MaSV);
         var tdHoTen = TaoTheTD("HoTen", sv.HoTen);
         var tdCMND = TaoTheTD("CMND", sv.CMND);
