@@ -69,3 +69,10 @@ function KiemTraTatCaLaChu() {
 function CapNhatDanhSachSV(DanhSachSinhVien) {
 
 }
+
+function TaoTheTD(className, value) {
+    var td = document.createElement("td");
+    td.className = className;
+    td.innerHTML = value;
+    return td
+}
