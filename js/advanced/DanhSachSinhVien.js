@@ -34,5 +34,6 @@ function DanhSachSinhVien() {
                 return sv;
             }
         }
+        return null;
     }
 }

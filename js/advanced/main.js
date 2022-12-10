@@ -156,5 +156,8 @@ function TimKiemSinhVien() {
 }
 
 function ChinhSuaSinhVien() {
-
+    var sinhvien = danhSachSinhVien.TimSVTheoMa(masv)
+    if (sinhvien != null) {
+        DomID("MaSV").value = sinhvien.MaSV
+    }
 }
