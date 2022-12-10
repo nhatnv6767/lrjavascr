@@ -103,3 +103,19 @@ function TaoTheTD(className, value) {
     td.innerHTML = value;
     return td
 }
+
+// luu storage
+function SetStorage() {
+    // chuyen doi object mang danh sach sinh vien thanh chuoi json
+    var jsonDanhSachSinhVien = JSON.stringify(danhSachSinhVien.DSSV)
+    // roi dem chuoi json luu vao storage va dat ten la DanhSachSV
+    localStorage.setItem("DanhSachSV", jsonDanhSachSinhVien);
+}
+
+function GetStorage() {
+    // lay ra chuoi json la mang danhsachsinhvien thong qua ten DanhSachSV
+    var jsonDanhSachSinhVien = localStorage.getItem("DanhSachSV");
+    var mangDSSV = JSON.parse(jsonDanhSachSinhVien);
+    danhSachSinhVien.DSSV = mangDSSV;
+    CapNhatDanhSachSV(danhSachSinhVien)
+}
