@@ -120,6 +120,10 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         var tdEmail = TaoTheTD("Email", sv.Email);
         var tdSoDT = TaoTheTD("SoDT", sv.SoDT);
 
+        // tao td xep loai va dtb
+        var tdDTB = TaoTheTD("DTB", sv.DTB);
+        var tdXepLoai = TaoTheTD("XepLoai", sv.Loai)
+
         // append cac td vao tr
         trSinhVien.appendChild(tdCheckBox)
         trSinhVien.appendChild(tdMaSV)
@@ -127,6 +131,8 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         trSinhVien.appendChild(tdCMND)
         trSinhVien.appendChild(tdEmail)
         trSinhVien.appendChild(tdSoDT)
+        trSinhVien.appendChild(tdDTB)
+        trSinhVien.appendChild(tdXepLoai)
 
         // append cac tr vao tbodySinhVien
         lstTableSV.appendChild(trSinhVien)
