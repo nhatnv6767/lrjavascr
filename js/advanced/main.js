@@ -1,6 +1,8 @@
 var danhSachSinhVien = new DanhSachSinhVien();
 var validate = new Validation();
 
+GetStorage()
+
 function DomID(id) {
     var element = document.getElementById(id);
     return element;
@@ -141,4 +143,5 @@ function XoaSinhVien() {
     }
     danhSachSinhVien.XoaSinhVien(lstMaSVDuocChon)
     CapNhatDanhSachSV(danhSachSinhVien)
+    SetStorage()
 }
