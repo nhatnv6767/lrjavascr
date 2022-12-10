@@ -26,4 +26,13 @@ function DanhSachSinhVien() {
         }
         return lstKetQuaTimKiem
     }
+
+    this.TimSVTheoMa = function (masv) {
+        for (var i = 0; i < this.DSSV.length; i++) {
+            var sv = this.DSSV[i];
+            if (sv.MaSV === masv) {
+                return sv;
+            }
+        }
+    }
 }
