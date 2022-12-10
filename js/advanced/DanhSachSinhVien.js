@@ -17,12 +17,13 @@ function DanhSachSinhVien() {
         for (var i = 0; i < this.DSSV.length; i++) {
             var svCurrent = this.DSSV[i];
             if (svCapNhat.MaSV === svCurrent) {
-                svCurrent.HoTen = svCapNhat.HoTen;
-                svCurrent.Email = svCapNhat.Email;
-                svCurrent.CMND = svCapNhat.CMND;
-                svCurrent.SoDT = svCapNhat.SoDT;
+                this.DSSV[i].HoTen = svCapNhat.HoTen;
+                this.DSSV[i].Email = svCapNhat.Email;
+                this.DSSV[i].CMND = svCapNhat.CMND;
+                this.DSSV[i].SoDT = svCapNhat.SoDT;
             }
         }
+        return this;
     }
     this.TimKiemSinhVien = function (keyWord) {
         // list ket qua tim kiem: DanhSachSinhVien
