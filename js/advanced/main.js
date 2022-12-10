@@ -64,3 +64,8 @@ function KiemTraTatCaLaChu() {
 
     }
 }
+
+
+function CapNhatDanhSachSV(DanhSachSinhVien) {
+
+}
