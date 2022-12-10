@@ -81,6 +81,7 @@ function CapNhatDanhSachSV(DanhSachSinhVien) {
         console.log(ckbMaSinhVien)
         ckbMaSinhVien.setAttribute("type", "checkbox")
         ckbMaSinhVien.setAttribute("value", sv.MaSV)
+        tdCheckBox.appendChild(ckbMaSinhVien)
 
         var tdMaSV = TaoTheTD("MaSV", sv.MaSV);
         var tdHoTen = TaoTheTD("HoTen", sv.HoTen);
